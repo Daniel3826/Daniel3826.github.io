@@ -4,11 +4,11 @@ contexto.fillStyle = "red";
 contexto.fillRect(50, 50, 50, 50);
 
 var miCanvas2 = document.getElementById("miCanvas2")
-var contexto = miCanvas2.getContext("2d");
+var contexto2 = miCanvas2.getContext2("2d");
 contexto.fillStyle = "blue";
-contexto.fillRect(200, 200, 220, 220);
+contexto.fillRect(100, 100, 150, 150);
 
 var miCanvas2 = document.getElementById("miCanvas2")
-var contexto = miCanvas2.getContext("2d");
+var contexto2 = miCanvas2.getContext2("2d");
 contexto.fillStyle = "yellow";
-contexto.fillRect(300, 300, 320, 320);
+contexto.fillRect(200, 200, 250, 250);
