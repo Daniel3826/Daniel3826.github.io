@@ -75,9 +75,6 @@ escena.add(luz2);
 
 x=0;
 function renderizar(){
-	// Rotamos el cubo
-	cubo.rotation.y += Math.PI * 0.5 / 180;
-	cubo.rotation.z += Math.PI * Math.cos(x++ / 50) / 180;
 	// Renderizamos la escena
 	lienzo.render(escena, camara);
 	// Volvemos a renderizar
