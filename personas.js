@@ -7,6 +7,20 @@ lienzo.setSize(WIDTH,HEIGHT);
 document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
+var puntos = [];
+for ( var i = 0; i < 50; i ++ ) 
+{
+    puntos.push( new THREE.Vector2(
+                     Math.sin( i * 0.2 ) * 15 + 50,
+                     ( i - 5 ) * 2 ) );
+}
+var forma3 = new THREE.LatheGeometry(puntos);
+
+var material3 = new THREE.MeshNormalMaterial();
+
+var malla2 = new THREE.Mesh( forma3, material3 );
+
+
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
@@ -46,6 +60,7 @@ escena.add(cubo1);
 escena.add(cubo2);
 escena.add( esfera, cilindro );
 escena.add(malla);
+escena.add(malla2);
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 
@@ -59,7 +74,7 @@ cubo2.position.x = 150;
 cilindro.position.x=220
 esfera.position.x=220
 esfera.position.y=45
-
+forma3.position.x=-200
 
 escena.add(camara);
 
