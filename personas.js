@@ -26,9 +26,6 @@ figura.lineTo(10, 50);
 figura.lineTo(20, 30);
 figura.lineTo(10, 10);
 
-var forma = new THREE.ExtrudeGeometry( figura,
-                                       {amount: 10} );
-
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );}
@@ -42,6 +39,9 @@ esfera.translateY(6);
 var forma = new THREE.ShapeGeometry(figura);
 forma.translate(-50, -30, 0);
 var malla = new THREE.Mesh(forma);
+
+var forma = new THREE.ExtrudeGeometry( figura,
+                                       {amount: 10} );
 
 escena.add(cubo1);
 escena.add(cubo2);
