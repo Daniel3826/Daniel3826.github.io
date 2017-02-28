@@ -32,17 +32,12 @@ var forma = new THREE.ExtrudeGeometry( figura,
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );}
-var material3 = new THREE.MeshNormalMaterial();
-
-
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
 var cilindro = new THREE.Mesh( forma1, material1 );
 var esfera = new THREE.Mesh(forma2, material2 );
 esfera.translateY(6);
-var malla = new THREE.Mesh( forma3, material3 );
-malla.rotateY( Math.PI/4 );
 
 var forma = new THREE.ShapeGeometry(figura);
 forma.translate(-50, -30, 0);
