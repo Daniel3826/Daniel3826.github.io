@@ -49,4 +49,4 @@ escena.add(luz2);
 
 lienzo.render(escena, camara);
 	
-renderizar();
+
