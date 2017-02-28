@@ -14,18 +14,16 @@ for ( var i = 0; i < 50; i ++ )
                      Math.sin( i * 0.2 ) * 15 + 50,
                      ( i - 5 ) * 2 ) );
 }
-var forma3 = new THREE.LatheGeometry(puntos);
-
-var material3 = new THREE.MeshNormalMaterial();
-
-var malla2 = new THREE.Mesh( forma3, material3 );
-malla2.rotateX( Math.PI/6 );
-
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
+
 var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
+
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
+
+var forma3 = new THREE.LatheGeometry(puntos);
+
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
 figura.lineTo(40, 10);
@@ -46,6 +44,10 @@ var malla = new THREE.Mesh(forma);
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
+
+var material3 = new THREE.MeshNormalMaterial();
+var malla2 = new THREE.Mesh( forma3, material3 );
+malla2.rotateX( Math.PI/6 );
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
@@ -75,7 +77,7 @@ cubo2.position.x = 150;
 cilindro.position.x=220
 esfera.position.x=220
 esfera.position.y=45
-forma3.position.x=-200
+forma3.position.x=-150
 
 escena.add(camara);
 
