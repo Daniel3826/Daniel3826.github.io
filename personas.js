@@ -9,27 +9,25 @@ var escena = new THREE.Scene;
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
-var troncoForma = new THREE.CylinderGeometry( 30, 30, 30, 30 );
-var esferaForma = new THREE.SphereGeometry( 30, 30, 30 );
-esferaForma.translateY(0,1,0);
+var forma1 = new THREE.CylinderGeometry( 15, 15, 30, 42 );
+var forma2 = new THREE.SphereGeometry( 17, 42, 42 );
+esfera.translateY(6);
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var troncoMalla = new THREE.Mesh(troncoForma);
-var esferaMalla = new THREE.Mesh(esferaForma);
-
-var arbolForma = new THREE.Geometry();
-arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
-arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
+var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
+var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
 var material = new THREE.MeshNormalMaterial();
 var arbolMalla = new THREE.Mesh(arbolForma, material);
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
+var cilindro = new THREE.Mesh( forma1, material1 );
+var esfera = new THREE.Mesh(forma2, material2 );
 
 escena.add(cubo1);
 escena.add(cubo2);
-escena.add( arbolMalla);
+escena.add( esfera, cilindro );
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 
