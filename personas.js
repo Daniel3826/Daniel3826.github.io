@@ -30,7 +30,7 @@ cubo2.position.x = 100;
 
 escena.add(camara);
 
-/*var luz1 = new THREE.PointLight(0xff0044);
+var luz1 = new THREE.PointLight(0xff0044);
 luz1.position.set(120,260,100);
 
 var luz2 = new THREE.PointLight(0x4499ff);
@@ -39,7 +39,7 @@ luz2.position.set(-100,100,200);
 escena.add(luz1);
 escena.add(luz2);
 
-x=0;
+/*x=0;
 init=true;
 hover=true;
 function renderizar(){
