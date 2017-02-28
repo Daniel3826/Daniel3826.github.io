@@ -10,7 +10,7 @@ var escena = new THREE.Scene;
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
 var forma1 = new THREE.CylinderGeometry( 50, 50, 50, 50 );
-var forma2 = new THREE.SphereGeometry( 60, 60, 60 );
+var forma2 = new THREE.SphereGeometry( 30, 30, 30 );
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
