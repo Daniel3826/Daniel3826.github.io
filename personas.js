@@ -58,7 +58,7 @@ cubo1.position.x = -90;
 cubo2.position.x = 150;
 cilindro.position.x=220
 esfera.position.x=220
-esfera.position.y=30
+esfera.position.y=45
 
 
 escena.add(camara);
