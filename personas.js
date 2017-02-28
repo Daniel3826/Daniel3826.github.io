@@ -7,8 +7,8 @@ lienzo.setSize(WIDTH,HEIGHT);
 document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
-var geometriaCubo1 = new THREE.CubeGeometry(100,140,100);
-var geometriaCubo2 = new THREE.CubeGeometry(100,140,100);
+var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
+var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 
@@ -30,7 +30,7 @@ cubo2.position.x = 100;
 
 escena.add(camara);
 
-var luz1 = new THREE.PointLight(0xff0044);
+/*var luz1 = new THREE.PointLight(0xff0044);
 luz1.position.set(120,260,100);
 
 var luz2 = new THREE.PointLight(0x4499ff);
@@ -52,12 +52,7 @@ function renderizar(){
 	cubo1.rotation.z += Math.PI * Math.cos(x++ / 50) / 180;
 	
 	cubo2.rotation.y += Math.PI * Math.cos(x++ / 100) / 180;
-	cubo2.rotation.z += Math.PI * 0.2 / 180;
+	cubo2.rotation.z += Math.PI * 0.2 / 180;*/
 	
 	lienzo.render(escena, camara);
-	requestAnimationFrame(renderizar);
-}
-renderizar();
-
-addEventListener("mouseover",function(){hover=true;});
-addEventListener("mouseout",function(){hover=false;});
+	
