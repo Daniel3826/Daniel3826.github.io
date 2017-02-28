@@ -54,11 +54,11 @@ camara.position.z = 400;
 
 camara.lookAt(cubo1.position);
 
-cubo1.position.x = -100;
-cubo2.position.x = 100;
-cilindro.position.x=200
-esfera.position.x=200
-figura.position.x=50
+cubo1.position.x = -150;
+cubo2.position.x = 150;
+cilindro.position.x=250
+esfera.position.x=250
+
 
 escena.add(camara);
 
