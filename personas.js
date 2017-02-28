@@ -9,7 +9,7 @@ var escena = new THREE.Scene;
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
-var forma1 = new THREE.CylinderGeometry( 10, 10, 30, 32 );
+var forma1 = new THREE.CylinderGeometry( 10, 10, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 14, 32, 32 );
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
@@ -54,8 +54,8 @@ camara.position.z = 400;
 
 camara.lookAt(cubo1.position);
 
-cubo1.position.x = -120;
-cubo2.position.x = 120;
+cubo1.position.x = -90;
+cubo2.position.x = 150;
 cilindro.position.x=220
 esfera.position.x=220
 
