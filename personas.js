@@ -53,6 +53,8 @@ camara.lookAt(cubo1.position);
 
 cubo1.position.x = -100;
 cubo2.position.x = 100;
+cilindro.position.x=-200
+esfera.position.x=200
 
 escena.add(camara);
 
