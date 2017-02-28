@@ -56,3 +56,4 @@ function renderizar(){
 	
 	lienzo.render(escena, camara);
 	
+renderizar();
