@@ -19,6 +19,7 @@ var forma3 = new THREE.LatheGeometry(puntos);
 var material3 = new THREE.MeshNormalMaterial();
 
 var malla2 = new THREE.Mesh( forma3, material3 );
+malla2.rotateX( Math.PI/6 );
 
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
