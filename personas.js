@@ -28,14 +28,13 @@ figura.lineTo(10, 10);
 
 var forma = new THREE.ShapeGeometry(figura);
 var malla = new THREE.Mesh(forma);
-var forma = new THREE.ExtrudeGeometry( figura,
-                                       {amount: 10} );
+var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
-var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );}
+var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
