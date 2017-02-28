@@ -9,14 +9,22 @@ var escena = new THREE.Scene;
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(35,75,35);
+var forma1 = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+var forma2 = new THREE.SphereGeometry( 7, 32, 32 );
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
+var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
+var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
+var cilindro = new THREE.Mesh( forma1, material1 );
+var esfera = new THREE.Mesh(forma2, material2 );
+esfera.translateY(6);
 
 escena.add(cubo1);
 escena.add(cubo2);
+escena.add( esfera, cilindro );
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 
@@ -39,21 +47,6 @@ luz2.position.set(-100,100,200);
 escena.add(luz1);
 escena.add(luz2);
 
-/*x=0;
-init=true;
-hover=true;
-function renderizar(){
-	if(!hover || init){
-		init=false;
-		requestAnimationFrame(renderizar);
-		return false;
-	}
-	cubo1.rotation.y += Math.PI * 0.5 / 180;
-	cubo1.rotation.z += Math.PI * Math.cos(x++ / 50) / 180;
-	
-	cubo2.rotation.y += Math.PI * Math.cos(x++ / 100) / 180;
-	cubo2.rotation.z += Math.PI * 0.2 / 180;*/
-	
-	lienzo.render(escena, camara);
+lienzo.render(escena, camara);
 	
 renderizar();
