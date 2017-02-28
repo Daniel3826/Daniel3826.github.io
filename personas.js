@@ -77,7 +77,6 @@ cubo2.position.x = 150;
 cilindro.position.x=220
 esfera.position.x=220
 esfera.position.y=45
-forma3.position.x=-150
 
 escena.add(camara);
 
