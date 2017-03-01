@@ -22,6 +22,16 @@ var geometriaCono2 = new THREE.ConeGeometry( 38, 50, 102 );
 
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
+var forma1 = new THREE.Mesh(forma1);
+var forma2 = new THREE.Mesh(forma2);
+forma2.position.y=45
+var monito = new THREE.Geometry();
+
+monito.merge(forma1.geometry, forma1.matrix);
+monito.merge(forma2.geometry, forma2.matrix);
+
+var material = new THREE.MeshNormalMaterial();
+var arbolMalla = new THREE.Mesh(arbolForma, material);
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
@@ -53,8 +63,7 @@ var malla2 = new THREE.Mesh( forma3, material3 );
 malla2.rotateX( Math.PI/6 );
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
-var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
+var material1 = new THREE.MeshNormalMaterial();
 
 var torus = new THREE.Mesh( geometriaToro, aparienciaLila);
 torus.rotateX( Math.PI/2);
@@ -64,12 +73,10 @@ var cone2 = new THREE.Mesh( geometriaCono2, material );
 cone2.rotateX( Math.PI)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
-var cilindro = new THREE.Mesh( forma1, material1 );
-var esfera = new THREE.Mesh(forma2, material2 );
-esfera.translateY(6);
+var monitoMalla = new THREE.Mesh(monito, material);
 
 escena.add(cubo1);
-escena.add( esfera, cilindro );
+escena.add( monitoMalla );
 escena.add(malla);
 escena.add(malla2);
 escena.add(torus);
@@ -82,15 +89,14 @@ camara.position.z = 400;
 
 camara.lookAt(cubo1.position);
 
-malla.position.x=-20
+malla.position.x=-20;
 cubo1.position.x = -90;
 cone1.position.x = 150;
 cone2.position.x = 150;
-cilindro.position.x=250
-esfera.position.x=250
-esfera.position.y=45
-malla2.position.x=-200
-torus.position.x=220
+monitoMalla.position.x=250;
+esfera.position.y=45;
+malla2.position.x=-200;
+torus.position.x=220;
 
 escena.add(camara);
 
