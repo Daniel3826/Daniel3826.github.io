@@ -94,7 +94,6 @@ cubo1.position.x = -90;
 cone1.position.x = 150;
 cone2.position.x = 150;
 monitoMalla.position.x=250;
-esfera.position.y=45;
 malla2.position.x=-200;
 torus.position.x=220;
 
