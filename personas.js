@@ -24,6 +24,8 @@ var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
+var geometriaToro = new THREE.TorusGeometry( 10, 3, 16, 100 );
+
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
 figura.lineTo(40, 10);
@@ -53,6 +55,9 @@ var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
+var material4 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+var torus = new THREE.Mesh( geometriaToro, material4 );
+
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
 var cilindro = new THREE.Mesh( forma1, material1 );
@@ -64,6 +69,7 @@ escena.add(cubo2);
 escena.add( esfera, cilindro );
 escena.add(malla);
 escena.add(malla2);
+escena.add(torus);
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 
