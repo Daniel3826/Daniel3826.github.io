@@ -24,7 +24,6 @@ var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
 var forma1Malla = new THREE.Mesh(forma1);
 var forma2Malla = new THREE.Mesh(forma2);
-forma2Malla.position.y=45
 var monito = new THREE.Geometry();
 
 monito.merge(forma1Malla.geometry, forma1Malla.matrix);
@@ -94,6 +93,7 @@ cubo1.position.x = -90;
 cone1.position.x = 150;
 cone2.position.x = 150;
 monitoMalla.position.x=250;
+forma2Malla.position.y=45
 malla2.position.x=-200;
 torus.position.x=220;
 
