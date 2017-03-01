@@ -73,7 +73,7 @@ escena.add( esfera, cilindro );
 escena.add(malla);
 escena.add(malla2);
 escena.add(torus);
-escena.add(cone, cone2);
+escena.add(cone1, cone2);
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 
