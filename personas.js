@@ -25,7 +25,7 @@ var forma2 = new THREE.SphereGeometry(26);
 forma2.translate(0,40,0);
 var Toro = new THREE.TorusGeometry( 25, 8, 8, 140 );
 Toro.translate(250,0,0);
-Toro.torus.rotateX(Math.PI/2);
+Toro.torus.rotate(Math.PI/2,0,0);
 var forma1Malla = new THREE.Mesh(forma1);
 var forma2Malla = new THREE.Mesh(forma2);
 var toroMalla= new THREE.Mesh(Toro);
