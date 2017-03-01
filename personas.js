@@ -21,8 +21,8 @@ var geometriaCono1 = new THREE.ConeGeometry( 38, 50, 102 );
 var geometriaCono2 = new THREE.ConeGeometry( 38, 50, 102 );
 
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
-var forma2 = new THREE.SphereGeometry(28,32,32);
-forma2.translate(0,32,0);
+var forma2 = new THREE.SphereGeometry(26);
+forma2.translate(0,60,0);
 var forma1Malla = new THREE.Mesh(forma1);
 var forma2Malla = new THREE.Mesh(forma2);
 forma2Malla.position.x=100;
