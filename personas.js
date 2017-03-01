@@ -57,7 +57,7 @@ var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
 var material4 = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var torus = new THREE.Mesh( geometriaToro, material4 );
-torus.rotateX( Math.PI/6 );
+torus.rotateX( Math.PI);
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
