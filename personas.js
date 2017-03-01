@@ -59,9 +59,7 @@ var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
 
-var material3 = new THREE.MeshNormalMaterial();
-var malla2 = new THREE.Mesh( forma3, material3 );
-malla2.rotateX( Math.PI);
+var malla2 = new THREE.Mesh( forma3, aparienciaLila );
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshNormalMaterial();
