@@ -61,7 +61,7 @@ torus.rotateX( Math.PI/2);
 
 var cone = new THREE.Mesh( geometriaCono1, material );
 var cone2 = new THREE.Mesh( geometriaCono2, material );
-cone2.rotatex(Math.PI/2)
+cone2.rotateX( Math.PI/2)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cilindro = new THREE.Mesh( forma1, material1 );
@@ -73,7 +73,7 @@ escena.add( esfera, cilindro );
 escena.add(malla);
 escena.add(malla2);
 escena.add(torus);
-escena.add(cone,cone2);
+escena.add(cone, cone2);
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 
