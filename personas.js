@@ -34,7 +34,7 @@ monito.merge(forma2Malla.geometry, forma2Malla.matrix);
 var material = new THREE.MeshNormalMaterial();
 var monitoMalla = new THREE.Mesh(monito, material);
 
-var toro = new THREE.TorusGeometry( 40, 13, 16, 104 );
+var toro = new THREE.TorusGeometry( 30, 23, 26, 104 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
@@ -73,7 +73,7 @@ cone2.rotateX( Math.PI)
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 
 var torus = new THREE.Mesh( toro, aparienciaLila );
-torus.rotateX( Math.PI/2 );
+torus.rotateX( Math.PI);
 
 escena.add(cubo1);
 escena.add( monitoMalla );
