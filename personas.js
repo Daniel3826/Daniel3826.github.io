@@ -59,7 +59,7 @@ var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 var torus = new THREE.Mesh( geometriaToro, aparienciaLila);
 torus.rotateX( Math.PI/2);
 
-var cone = new THREE.Mesh( geometriaCono1, material );
+var cone1 = new THREE.Mesh( geometriaCono1, material );
 var cone2 = new THREE.Mesh( geometriaCono2, material );
 cone2.rotateX( Math.PI/2)
 
