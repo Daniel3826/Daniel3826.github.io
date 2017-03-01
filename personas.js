@@ -73,6 +73,7 @@ cone2.rotateX( Math.PI)
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 
 var torus = new THREE.Mesh( toro, aparienciaLila );
+torus.rotateX( Math.PI/2 );
 
 escena.add(cubo1);
 escena.add( monitoMalla );
