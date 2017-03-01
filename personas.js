@@ -17,8 +17,8 @@ for ( var i = 0; i < 50; i ++ )
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 
-var geometriaCono1 = new THREE.ConeGeometry( 5, 20, 32 );
-var geometriaCono2 = new THREE.ConeGeometry( 5, 20, 32 );
+var geometriaCono1 = new THREE.ConeGeometry( 15, 30, 52 );
+var geometriaCono2 = new THREE.ConeGeometry( 15, 30, 52 );
 
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
