@@ -17,8 +17,8 @@ for ( var i = 0; i < 50; i ++ )
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 
-var geometriaCono1 = new THREE.ConeGeometry( 25, 40, 82 );
-var geometriaCono2 = new THREE.ConeGeometry( 25, 40, 82 );
+var geometriaCono1 = new THREE.ConeGeometry( 38, 50, 102 );
+var geometriaCono2 = new THREE.ConeGeometry( 38, 50, 102 );
 
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
@@ -61,7 +61,7 @@ torus.rotateX( Math.PI/2);
 
 var cone1 = new THREE.Mesh( geometriaCono1, material );
 var cone2 = new THREE.Mesh( geometriaCono2, material );
-cone2.rotateX( Math.PI/2)
+cone2.rotateX( Math.PI)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cilindro = new THREE.Mesh( forma1, material1 );
