@@ -24,7 +24,7 @@ var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
-var geometriaToro = new THREE.TorusGeometry( 30, 23, 36, 300 );
+var geometriaToro = new THREE.TorusGeometry( 20, 13, 26, 200 );
 
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
