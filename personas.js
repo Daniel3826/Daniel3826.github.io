@@ -8,10 +8,10 @@ document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
 var puntos = [];
-for ( var i = 0; i < 50; i ++ ) 
+for ( var i = 0; i < 40; i ++ ) 
 {
     puntos.push( new THREE.Vector2(
-                     Math.sin( i * 0.6 ) * 18 + 30,
+                     Math.sin( i * 0.3 ) * 18 + 30,
                      ( i - 3 ) * 4 ) );
 }
 
