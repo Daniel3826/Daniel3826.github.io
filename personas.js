@@ -24,7 +24,7 @@ var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
-var geometriaToro = new THREE.TorusGeometry( 20, 8, 8, 80 );
+var geometriaToro = new THREE.TorusGeometry( 20, 8, 8, 140 );
 
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
@@ -55,7 +55,7 @@ var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
-var material4 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+var material4 = new THREE..MeshLambertMaterial({color: 0x9999FF});
 var torus = new THREE.Mesh( geometriaToro, material4 );
 torus.rotateX( Math.PI/6 );
 
