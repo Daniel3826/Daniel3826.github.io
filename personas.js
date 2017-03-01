@@ -82,11 +82,12 @@ camara.position.z = 400;
 
 camara.lookAt(cubo1.position);
 
+malla.position.x=-20
 cubo1.position.x = -90;
 cone1.position.x = 150;
 cone2.position.x = 150;
-cilindro.position.x=220
-esfera.position.x=220
+cilindro.position.x=250
+esfera.position.x=250
 esfera.position.y=45
 malla2.position.x=-200
 torus.position.x=220
