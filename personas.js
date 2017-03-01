@@ -22,9 +22,9 @@ var geometriaCono2 = new THREE.ConeGeometry( 38, 50, 102 );
 
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
+forma2.position.y=45
 var forma1 = new THREE.Mesh(forma1);
 var forma2 = new THREE.Mesh(forma2);
-forma2.position.y=45
 var monito = new THREE.Geometry();
 
 monito.merge(forma1.geometry, forma1.matrix);
