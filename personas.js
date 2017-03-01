@@ -24,7 +24,7 @@ var forma2 = new THREE.SphereGeometry( 28, 32, 32 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
-var geometriaToro = new THREE.TorusGeometry( 20, 8, 8, 140 );
+var geometriaToro = new THREE.TorusGeometry( 25, 8, 8, 140 );
 
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
@@ -85,6 +85,7 @@ cilindro.position.x=220
 esfera.position.x=220
 esfera.position.y=45
 malla2.position.x=-200
+torus.position.x=220
 
 escena.add(camara);
 
