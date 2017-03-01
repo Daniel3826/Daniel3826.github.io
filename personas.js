@@ -31,7 +31,7 @@ monito.merge(forma1.geometry, forma1.matrix);
 monito.merge(forma2.geometry, forma2.matrix);
 
 var material = new THREE.MeshNormalMaterial();
-var arbolMalla = new THREE.Mesh(arbolForma, material);
+var monitoMalla = new THREE.Mesh(monito, material);
 
 var forma3 = new THREE.LatheGeometry(puntos);
 
