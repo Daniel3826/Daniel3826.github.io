@@ -55,7 +55,7 @@ var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x4bb145 } );
 
-var material4 = new THREE..MeshLambertMaterial({color: 0x9999FF});
+var material4 = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var torus = new THREE.Mesh( geometriaToro, material4 );
 torus.rotateX( Math.PI/6 );
 
