@@ -8,11 +8,11 @@ document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
 var puntos = [];
-for ( var i = 0; i < 40; i ++ ) 
+for ( var i = 0; i < 38; i ++ ) 
 {
     puntos.push( new THREE.Vector2(
-                     Math.sin( i * 0.4 ) * 15 + 20,
-                     ( i - 6 ) * 7 ) );
+                     Math.sin( i * 0.7 ) * 16 + 28,
+                     ( i - 2 ) * 4 ) );
 }
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
