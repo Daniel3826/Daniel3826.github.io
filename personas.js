@@ -11,8 +11,8 @@ var puntos = [];
 for ( var i = 0; i < 40; i ++ ) 
 {
     puntos.push( new THREE.Vector2(
-                     Math.sin( i * 0.3 ) * 18 + 30,
-                     ( i - 3 ) * 4 ) );
+                     Math.sin( i * 0.4 ) * 15 + 20,
+                     ( i - 6 ) * 7 ) );
 }
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
