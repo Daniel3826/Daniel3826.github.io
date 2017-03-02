@@ -32,8 +32,7 @@ var monito = new THREE.Geometry();
 monito.merge(forma1Malla.geometry, forma1Malla.matrix);
 monito.merge(forma2Malla.geometry, forma2Malla.matrix);
 
-var material = new THREE.MeshNormalMaterial();
-var monitoMalla = new THREE.Mesh(monito, material);
+var monitoMalla = new THREE.Mesh(monito, aparienciaLila);
 
 var toro = new THREE.TorusGeometry( 30, 13, 20, 98 );
 
@@ -60,15 +59,14 @@ var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
 
-var material2 = new THREE.MeshNormalMaterial();
-var malla2 = new THREE.Mesh( forma3, material2 );
+var malla2 = new THREE.Mesh( forma3, aparienciaLila );
 malla2.rotateX( Math.PI/8)
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var material1 = new THREE.MeshNormalMaterial();
+var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0xFFFAFA});
 
-var cone1 = new THREE.Mesh( geometriaCono1, material );
-var cone2 = new THREE.Mesh( geometriaCono2, material );
+var cone1 = new THREE.Mesh( geometriaCono1, aparienciaLila );
+var cone2 = new THREE.Mesh( geometriaCono2, aparienciaLila );
 cone2.rotateX( Math.PI)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
