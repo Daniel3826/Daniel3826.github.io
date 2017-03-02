@@ -20,7 +20,8 @@ for ( var i = 0; i < 38; i ++ )
 }
 
 
-var geometriacuerda = new THREE.TorusKnotBufferGeometry( 30, 10, 88, 22 );
+var geometriacuerda = new THREE.TorusKnotBufferGeometry( 30, 9, 88, 22 );
+var geometriacuerda2 = new THREE.TorusKnotBufferGeometry( 30, 9, 88, 22 );
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(50,90,50);
@@ -108,6 +109,7 @@ var cone4 = new THREE.Mesh( geometriaCono4, apariencia3 );
 cone4.rotateX( Math.PI)
 
 var cuerda = new THREE.Mesh( geometriacuerda, aparienciaLila );
+var cuerda2 = new THREE.Mesh( geometriacuerda, apariencia3 );
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, apariencia3);
@@ -136,6 +138,7 @@ escena.add(torus);
 escena.add(torus2);
 
 escena.add( cuerda );
+escena.add( cuerda2 );
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 camara.position.y = 160;
@@ -149,6 +152,8 @@ malla2.position.z=300;
 
 cuerda.position.z=-90;
 cuerda.position.y=78;
+cuerda2.position.z=390;
+cuerda2.position.y=78;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
@@ -209,6 +214,7 @@ function renderizar(){
 	malla3.rotation.y += Math.PI*2/200;
 	malla4.rotation.y += Math.PI*2/200;
 	
+	cuerda.rotation.y += Math.PI*2/200;
 	
 	lienzo.render(escena, camara);
 	requestAnimationFrame(renderizar);
