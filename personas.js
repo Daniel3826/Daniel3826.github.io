@@ -131,11 +131,10 @@ escena.add(cone3, cone4);
 escena.add(torus);
 escena.add(torus2);
 
-var camera
-camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
-		camera.position.x = 200;
-		camera.position.y = 100;
-	 	camera.position.z = 200;
+camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
+		camara.position.x = 200;
+		camara.position.y = 100;
+	 	camara.position.z = 200;
 
 malla.position.x=-20;
 malla2.position.x=-20;
