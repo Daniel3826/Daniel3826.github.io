@@ -120,7 +120,8 @@ function renderizar(){
 	cubo1.rotation.y += Math.PI * 0.5 / 180;
 	cubo1.rotation.z += Math.PI * Math.cos(x++ / 50) / 180;
 	
-	monitoMalla.rotation.y += Math.PI*0.5/180;
+	monitoMalla.rotation.y += Math.PI*0.5/200;
+	torus.rotation.z += Math.PI*0.5/200;
 	cone1.rotation.x += Math.PI*0.5/180;
 	cone2.rotation.x += Math.PI*0.5/180;
 	
