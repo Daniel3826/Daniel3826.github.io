@@ -99,7 +99,7 @@ escena.add(malla4);
 escena.add(cone1, cone2);
 escena.add(torus);
 
-var camara = new THREE.PerspectiveCamera(130,(WIDTH / HEIGHT),0.1,10000);
+var camara = new THREE.PerspectiveCamera(102,(WIDTH / HEIGHT),0.2,10000);
 
 camara.position.y = 200;
 camara.position.z = 400;
@@ -110,7 +110,7 @@ malla.position.x=-20;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
-cubo2.position.z = 250;
+cubo2.position.z = 220;
 
 cone1.position.x = 150;
 cone2.position.x = 150;
@@ -118,7 +118,7 @@ monitoMalla.position.x=250;
 
 malla3.position.x=-200;
 malla4.position.x=-200;
-malla4.position.z=250;
+malla4.position.z=220;
 
 torus.position.x=250;
 
