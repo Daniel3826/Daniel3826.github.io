@@ -68,10 +68,30 @@ figura.lineTo(10, 50);
 figura.lineTo(20, 30);
 figura.lineTo(10, 10);
 
+var figura2 = new THREE.Shape();
+figura.moveTo(10, 10);
+figura.lineTo(40, 10);
+figura.lineTo(50, -10);
+figura.lineTo(60, 10);
+figura.lineTo(90, 10);
+figura.lineTo(80, 30);
+figura.lineTo(90, 50);
+figura.lineTo(60, 50);
+figura.lineTo(50, 70);
+figura.lineTo(40, 50);
+figura.lineTo(10, 50);
+figura.lineTo(20, 30);
+figura.lineTo(10, 10);
+
 var forma = new THREE.ShapeGeometry(figura);
 var malla = new THREE.Mesh(forma);
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var malla = new THREE.Mesh( forma, aparienciaLila );
+var forma2 = new THREE.ShapeGeometry(figura2);
+var malla2 = new THREE.Mesh(forma2);
+var forma2 = new THREE.ExtrudeGeometry( figura2,{amount: 10} );
+var malla2 = new THREE.Mesh( forma2, apariencia3 );
+
 
 var malla3 = new THREE.Mesh( forma3, aparienciaLila );
 malla3.rotateX( Math.PI/8)
@@ -100,6 +120,7 @@ escena.add( monitoMalla );
 escena.add( monitoMalla2 );
 
 escena.add(malla);
+escena.add(malla2);
 
 escena.add(malla3);
 escena.add(malla4);
@@ -119,6 +140,8 @@ camara.position.x = 410;
 camara.lookAt(malla.position);
 
 malla.position.x=-20;
+malla2.position.x=-20;
+malla2.position.z=300;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
