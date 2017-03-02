@@ -114,7 +114,7 @@ var camara = new THREE.PerspectiveCamera(115,(WIDTH / HEIGHT),0.1,10000);
 
 camara.position.y = 80;
 camara.position.z = 400;
-camara.position.x = 500;
+camara.position.x = 420;
 
 camara.lookAt(malla.position);
 
