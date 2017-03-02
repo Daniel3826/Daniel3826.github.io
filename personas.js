@@ -8,7 +8,8 @@ document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0xF0D58C});
+var apariencia2= new THREE.MeshLambertMaterial({color: 0xF0D58C});
+var apariencia3= new THREE.MeshLambertMaterial({color: 0x00FFFF});
 
 var puntos = [];
 for ( var i = 0; i < 38; i ++ ) 
@@ -16,6 +17,14 @@ for ( var i = 0; i < 38; i ++ )
     puntos.push( new THREE.Vector2(
                      Math.sin( i * 0.7 ) * 16 + 28,
                      ( i - 2 ) * 4 ) );
+}
+
+var puntos2 = [];
+for ( var j = 0; j < 38; j ++ ) 
+{
+    puntos2.push( new THREE.Vector3(
+                     Math.sin( j * 0.7 ) * 16 + 28,
+                     ( j - 2 ) * 4 ) );
 }
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
@@ -40,6 +49,7 @@ var monitoMalla = new THREE.Mesh(monito, aparienciaLila);
 var toro = new THREE.TorusGeometry( 30, 13, 20, 98 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
+var forma4 = new THREE.LatheGeometry(puntos2);
 
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
@@ -61,8 +71,10 @@ var malla = new THREE.Mesh(forma);
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var malla = new THREE.Mesh( forma, aparienciaLila );
 
-var malla2 = new THREE.Mesh( forma3, aparienciaLila );
-malla2.rotateX( Math.PI/8)
+var malla3 = new THREE.Mesh( forma3, aparienciaLila );
+malla3.rotateX( Math.PI/8)
+var malla4 = new THREE.Mesh( forma4, apariencia3 );
+malla4.rotateX( Math.PI/8)
 
 var cone1 = new THREE.Mesh( geometriaCono1, aparienciaLila );
 var cone2 = new THREE.Mesh( geometriaCono2, aparienciaLila );
@@ -71,14 +83,19 @@ cone2.rotateX( Math.PI)
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
 
-var torus = new THREE.Mesh( toro, aparienciaNieve );
+var torus = new THREE.Mesh( toro, apariencia2 );
 torus.rotateX( Math.PI/2);
 
 escena.add(cubo1);
 escena.add(cubo2);
+
 escena.add( monitoMalla );
+
 escena.add(malla);
-escena.add(malla2);
+
+escena.add(malla3);
+escena.add(malla4);
+
 escena.add(cone1, cone2);
 escena.add(torus);
 
