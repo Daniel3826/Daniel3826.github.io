@@ -20,7 +20,7 @@ for ( var i = 0; i < 38; i ++ )
 }
 
 
-var geometriacuerda = new THREE.TorusKnotBufferGeometry( 30, 16, 106, 32 );
+var geometriacuerda = new THREE.TorusKnotBufferGeometry( 30, 16, 88, 22 );
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(50,90,50);
