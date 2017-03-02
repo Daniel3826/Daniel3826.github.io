@@ -98,6 +98,8 @@ camara.position.y = 80;
 camara.position.z = 400;
 camara.position.x = 200;
 
+camara.lookAt(malla.position);
+
 malla.position.x=-20;
 
 cubo1.position.x = -90;
