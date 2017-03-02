@@ -140,7 +140,7 @@ escena.add(torus2);
 escena.add( cuerda );
 escena.add( cuerda2 );
 
-var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
+var camara = new THREE.PerspectiveCamera(65,(WIDTH / HEIGHT),0.1,10000);
 camara.position.x = 99;
 camara.position.y = 140;
 camara.position.z = 635;
