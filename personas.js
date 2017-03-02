@@ -9,7 +9,7 @@ var escena = new THREE.Scene;
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
 var apariencia2= new THREE.MeshLambertMaterial({color: 0xF0D58C});
-var apariencia3= new THREE.MeshLambertMaterial({color: 0xF0FFF0});
+var apariencia3= new THREE.MeshLambertMaterial({color: 0xFFFFFF});
 
 var puntos = [];
 for ( var i = 0; i < 38; i ++ ) 
