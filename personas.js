@@ -131,8 +131,6 @@ escena.add(cone3, cone4);
 escena.add(torus);
 escena.add(torus2);
 
-escena.add(torreMalla)
-
 var camera
 camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
 		camera.position.x = 200;
