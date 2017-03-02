@@ -8,7 +8,7 @@ document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0x98FB98});
+var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0xF0D58C});
 
 var puntos = [];
 for ( var i = 0; i < 38; i ++ ) 
@@ -82,7 +82,7 @@ escena.add(malla2);
 escena.add(cone1, cone2);
 escena.add(torus);
 
-var camara = new THREE.PerspectiveCamera(70,(WIDTH / HEIGHT),0.1,10000);
+var camara = new THREE.PerspectiveCamera(100,(WIDTH / HEIGHT),0.1,10000);
 
 camara.position.y = 200;
 camara.position.z = 400;
