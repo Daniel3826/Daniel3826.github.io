@@ -8,7 +8,7 @@ document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
 var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0xFFFAFA});
+var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0x98FB98});
 
 var puntos = [];
 for ( var i = 0; i < 38; i ++ ) 
@@ -93,7 +93,7 @@ malla.position.x=-20;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
-cubo2.position.z = 80;
+cubo2.position.z = 220;
 
 cone1.position.x = 150;
 cone2.position.x = 150;
