@@ -16,6 +16,7 @@ for ( var i = 0; i < 38; i ++ )
 }
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
+var geometriaCubo2 = new THREE.CubeGeometry(50,90,50);
 
 var geometriaCono1 = new THREE.ConeGeometry( 38, 50, 102 );
 var geometriaCono2 = new THREE.ConeGeometry( 38, 50, 102 );
@@ -70,12 +71,14 @@ var cone1 = new THREE.Mesh( geometriaCono1, material );
 var cone2 = new THREE.Mesh( geometriaCono2, material );
 cone2.rotateX( Math.PI)
 
-var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
+var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);}
+var cubo2 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 
 var torus = new THREE.Mesh( toro, aparienciaLila );
 torus.rotateX( Math.PI/2);
 
 escena.add(cubo1);
+escena.add(cubo2);
 escena.add( monitoMalla );
 escena.add(malla);
 escena.add(malla2);
@@ -90,7 +93,11 @@ camara.position.z = 400;
 camara.lookAt(cubo1.position);
 
 malla.position.x=-20;
+
 cubo1.position.x = -90;
+cubo2.position.x = -90;
+cubo2.position.z = 80;
+
 cone1.position.x = 150;
 cone2.position.x = 150;
 monitoMalla.position.x=250;
