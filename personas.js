@@ -110,12 +110,16 @@ malla.position.x=-20;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
-cubo2.position.z = 220;
+cubo2.position.z = 180;
 
 cone1.position.x = 150;
 cone2.position.x = 150;
 monitoMalla.position.x=250;
-malla2.position.x=-200;
+
+malla3.position.x=-200;
+malla4.position.x=-200;
+malla4.position.z=-180;
+
 torus.position.x=250;
 
 escena.add(camara);
