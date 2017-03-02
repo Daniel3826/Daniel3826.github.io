@@ -141,8 +141,6 @@ camara.position.x=160;
 camara.position.y=40;
 camara.rotateZ(Math.PI/2);
 
-camara.lookAt(malla.position);
-
 malla.position.x=-20;
 malla2.position.x=-20;
 malla2.position.z=300;
