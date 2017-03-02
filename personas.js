@@ -19,13 +19,6 @@ for ( var i = 0; i < 38; i ++ )
                      ( i - 2 ) * 4 ) );
 }
 
-var puntos2 = [];
-for ( var j = 0; j < 38; j ++ ) 
-{
-    puntos2.push( new THREE.Vector3(
-                     Math.sin( j * 0.7 ) * 16 + 28,
-                     ( j - 2 ) * 4 ) );
-}
 
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(50,90,50);
@@ -49,7 +42,7 @@ var monitoMalla = new THREE.Mesh(monito, aparienciaLila);
 var toro = new THREE.TorusGeometry( 30, 13, 20, 98 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
-var forma4 = new THREE.LatheGeometry(puntos2);
+var forma4 = new THREE.LatheGeometry(puntos);
 
 var figura = new THREE.Shape();
 figura.moveTo(10, 10);
@@ -81,7 +74,7 @@ var cone2 = new THREE.Mesh( geometriaCono2, aparienciaLila );
 cone2.rotateX( Math.PI)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
-var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
+var cubo2 = new THREE.Mesh(geometriaCubo2, apariencia3);
 
 var torus = new THREE.Mesh( toro, apariencia2 );
 torus.rotateX( Math.PI/2);
@@ -111,7 +104,7 @@ malla.position.x=-20;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
-cubo2.position.z = 220;
+cubo2.position.z = 300;
 
 cone1.position.x = 150;
 cone2.position.x = 150;
@@ -119,7 +112,7 @@ monitoMalla.position.x=250;
 
 malla3.position.x=-200;
 malla4.position.x=-200;
-malla4.position.z=220;
+malla4.position.z=300;
 
 torus.position.x=250;
 
