@@ -7,6 +7,9 @@ lienzo.setSize(WIDTH,HEIGHT);
 document.body.appendChild(lienzo.domElement);
 var escena = new THREE.Scene;
 
+var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
+var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0xFFFAFA});
+
 var puntos = [];
 for ( var i = 0; i < 38; i ++ ) 
 {
@@ -56,14 +59,10 @@ figura.lineTo(10, 10);
 var forma = new THREE.ShapeGeometry(figura);
 var malla = new THREE.Mesh(forma);
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
-var material = new THREE.MeshNormalMaterial();
-var malla = new THREE.Mesh( forma, material );
+var malla = new THREE.Mesh( forma, aparienciaLila );
 
 var malla2 = new THREE.Mesh( forma3, aparienciaLila );
 malla2.rotateX( Math.PI/8)
-
-var aparienciaLila = new THREE.MeshLambertMaterial({color: 0x9999FF});
-var aparienciaNieve= new THREE.MeshLambertMaterial({color: 0xFFFAFA});
 
 var cone1 = new THREE.Mesh( geometriaCono1, aparienciaLila );
 var cone2 = new THREE.Mesh( geometriaCono2, aparienciaLila );
@@ -72,7 +71,7 @@ cone2.rotateX( Math.PI)
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
 
-var torus = new THREE.Mesh( toro, aparienciaLila );
+var torus = new THREE.Mesh( toro, aparienciaNieve );
 torus.rotateX( Math.PI/2);
 
 escena.add(cubo1);
