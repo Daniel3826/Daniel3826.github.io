@@ -108,6 +108,25 @@ luz2.position.set(-100,100,200);
 escena.add(luz1);
 escena.add(luz2);
 
-lienzo.render(escena, camara);
+x=0;
+init=true;
+hover=true;
+function renderizar(){
+	if(!hover || init){
+		init=false;
+		requestAnimationFrame(renderizar);
+		return false;
+	}
+	cubo1.rotation.y += Math.PI * 0.5 / 180;
+	cubo1.rotation.z += Math.PI * Math.cos(x++ / 50) / 180;
+	
+	torus.rotation.x += Math.PI; 
+	cone1.rotation.x += Math.PI;
+	cone2.rotation.x += Math.PI;
+	
+	lienzo.render(escena, camara);
+	requestAnimationFrame(renderizar);
+}
+renderizar();
 	
 
