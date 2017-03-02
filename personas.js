@@ -131,15 +131,13 @@ escena.add(cone3, cone4);
 escena.add(torus);
 escena.add(torus2);
 
-var campoVision = 45;
-var relacionAspecto = window.innerWidth / window.innerHeight;
-var planoCercano = 1;
-var planoLejano = 1000;
-var camara = new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
-camara.position.z=50;
-camara.position.x=160;
-camara.position.y=40;
-camara.rotateZ(Math.PI/2);
+var camara = new THREE.PerspectiveCamera(120,(WIDTH / HEIGHT),0.5,10000);
+camara.position.y = 155;
+camara.position.z = 300;
+camara.position.x = 435;
+
+camara.lookAt(malla.position);
+
 
 malla.position.x=-20;
 malla2.position.x=-20;
