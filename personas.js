@@ -20,6 +20,8 @@ for ( var i = 0; i < 38; i ++ )
 }
 
 
+var geometriacuerda = new THREE.TorusKnotBufferGeometry( 10, 3, 100, 16 );
+
 var geometriaCubo1 = new THREE.CubeGeometry(50,90,50);
 var geometriaCubo2 = new THREE.CubeGeometry(50,90,50);
 
@@ -105,6 +107,8 @@ var cone3 = new THREE.Mesh( geometriaCono3, apariencia3 );
 var cone4 = new THREE.Mesh( geometriaCono4, apariencia3 );
 cone4.rotateX( Math.PI)
 
+var cuerda = new THREE.Mesh( geometriacuerda, aparienciaLila );
+
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, apariencia3);
 
@@ -131,6 +135,8 @@ escena.add(cone3, cone4);
 escena.add(torus);
 escena.add(torus2);
 
+escena.add( cuerda );
+
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
 camara.position.x = 99;
 camara.position.y = 140;
@@ -141,6 +147,8 @@ camara.lookAt(malla2.position);
 malla.position.x=-20;
 malla2.position.x=-20;
 malla2.position.z=300;
+
+cuerda.position.z=-90;
 
 cubo1.position.x = -90;
 cubo2.position.x = -90;
