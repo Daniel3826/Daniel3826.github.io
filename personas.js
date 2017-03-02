@@ -33,15 +33,22 @@ var forma2 = new THREE.SphereGeometry(26);
 forma2.translate(0,40,0);
 var forma1Malla = new THREE.Mesh(forma1);
 var forma2Malla = new THREE.Mesh(forma2);
+var forma3Malla = new THREE.Mesh(forma1);
+var forma4Malla = new THREE.Mesh(forma2);
 
 var monito = new THREE.Geometry();
+var monito2 = new THREE.Geometry();
 
 monito.merge(forma1Malla.geometry, forma1Malla.matrix);
 monito.merge(forma2Malla.geometry, forma2Malla.matrix);
+monito2.merge(forma3Malla.geometry, forma3Malla.matrix);
+monito2.merge(forma4Malla.geometry, forma4Malla.matrix);
 
 var monitoMalla = new THREE.Mesh(monito, aparienciaLila);
+var monitoMalla2 = new THREE.Mesh(monito2, apariencia3);
 
 var toro = new THREE.TorusGeometry( 30, 13, 20, 98 );
+var toro2 = new THREE.TorusGeometry( 30, 13, 20, 98 );
 
 var forma3 = new THREE.LatheGeometry(puntos);
 var forma4 = new THREE.LatheGeometry(puntos);
@@ -83,11 +90,14 @@ var cubo2 = new THREE.Mesh(geometriaCubo2, apariencia3);
 
 var torus = new THREE.Mesh( toro, apariencia2 );
 torus.rotateX( Math.PI/2);
+var torus2 = new THREE.Mesh( toro2, apariencia2 );
+torus2.rotateX( Math.PI/2);
 
 escena.add(cubo1);
 escena.add(cubo2);
 
 escena.add( monitoMalla );
+escena.add( monitoMalla2 );
 
 escena.add(malla);
 
@@ -98,6 +108,7 @@ escena.add(cone1, cone2);
 escena.add(cone3, cone4);
 
 escena.add(torus);
+escena.add(torus2);
 
 var camara = new THREE.PerspectiveCamera(115,(WIDTH / HEIGHT),0.1,10000);
 
