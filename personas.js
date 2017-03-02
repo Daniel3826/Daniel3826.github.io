@@ -141,9 +141,6 @@ malla.position.x=-20;
 malla2.position.x=-20;
 malla2.position.z=300;
 
-torreMalla.position.x=-20;
-torreMalla.position.z=-100;
-
 cubo1.position.x = -90;
 cubo2.position.x = -90;
 cubo2.position.z = 300;
