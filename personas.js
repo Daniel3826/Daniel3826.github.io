@@ -99,7 +99,7 @@ escena.add(cone3, cone4);
 
 escena.add(torus);
 
-var camara = new THREE.PerspectiveCamera(102,(WIDTH / HEIGHT),0.2,10000);
+var camara = new THREE.PerspectiveCamera(160,(WIDTH / HEIGHT),0.1,10000);
 
 camara.position.y = 80;
 camara.position.z = 400;
