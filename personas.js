@@ -141,8 +141,9 @@ escena.add( cuerda );
 escena.add( cuerda2 );
 
 var camara = new THREE.PerspectiveCamera(45,(WIDTH / HEIGHT),0.1,10000);
-camara.position.y = 160;
-camara.position.z = 400;
+camara.position.x = 99;
+camara.position.y = 140;
+camara.position.z = 635;
 
 camara.lookAt(malla.position);
 
@@ -215,6 +216,7 @@ function renderizar(){
 	malla4.rotation.y += Math.PI*2/200;
 	
 	cuerda.rotation.y += Math.PI*2/200;
+	cuerda2.rotation.y += Math.PI*2/200;
 	
 	lienzo.render(escena, camara);
 	requestAnimationFrame(renderizar);
