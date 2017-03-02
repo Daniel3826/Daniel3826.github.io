@@ -25,6 +25,8 @@ var geometriaCubo2 = new THREE.CubeGeometry(50,90,50);
 
 var geometriaCono1 = new THREE.ConeGeometry( 38, 50, 102 );
 var geometriaCono2 = new THREE.ConeGeometry( 38, 50, 102 );
+var geometriaCono3 = new THREE.ConeGeometry( 38, 50, 102 );
+var geometriaCono4 = new THREE.ConeGeometry( 38, 50, 102 );
 
 var forma1 = new THREE.CylinderGeometry( 10, 20, 60, 32 );
 var forma2 = new THREE.SphereGeometry(26);
@@ -72,6 +74,9 @@ malla4.rotateX( Math.PI/8)
 var cone1 = new THREE.Mesh( geometriaCono1, aparienciaLila );
 var cone2 = new THREE.Mesh( geometriaCono2, aparienciaLila );
 cone2.rotateX( Math.PI)
+var cone3 = new THREE.Mesh( geometriaCono3, apariencia3 );
+var cone4 = new THREE.Mesh( geometriaCono4, apariencia3 );
+cone4.rotateX( Math.PI)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
 var cubo2 = new THREE.Mesh(geometriaCubo2, apariencia3);
@@ -90,6 +95,8 @@ escena.add(malla3);
 escena.add(malla4);
 
 escena.add(cone1, cone2);
+escena.add(cone3, cone4);
+
 escena.add(torus);
 
 var camara = new THREE.PerspectiveCamera(102,(WIDTH / HEIGHT),0.2,10000);
@@ -108,6 +115,11 @@ cubo2.position.z = 300;
 
 cone1.position.x = 150;
 cone2.position.x = 150;
+cone3.position.x = 150;
+cone4.position.x = 150;
+cone3.position.z = 300;
+cone4.position.z = 300;
+
 monitoMalla.position.x=250;
 
 malla3.position.x=-200;
