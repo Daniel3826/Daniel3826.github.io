@@ -72,7 +72,7 @@ var cone2 = new THREE.Mesh( geometriaCono2, material );
 cone2.rotateX( Math.PI)
 
 var cubo1 = new THREE.Mesh(geometriaCubo1, aparienciaLila);}
-var cubo2 = new THREE.Mesh(geometriaCubo1, aparienciaLila);
+var cubo2 = new THREE.Mesh(geometriaCubo2, aparienciaLila);
 
 var torus = new THREE.Mesh( toro, aparienciaLila );
 torus.rotateX( Math.PI/2);
