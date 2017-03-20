@@ -1,10 +1,10 @@
 //Figuras
-var base1Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
-var base2Forma = new THREE.CylinderGeometry(4,4,1,20,1,false);
-var base3Forma = new THREE.CylinderGeometry(3,4,2,20,2,false);
-var troncoForma = new THREE.CylinderGeometry(3,3,6,20,6,false);
-var cubierta1Forma = new THREE.CylinderGeometry(4,3,2,20,2,false);
-var cubierta2Forma = new THREE.CylinderGeometry(4,4,2,20,3,false);
+var base1Forma = new THREE.CylinderGeometry(5,5,1,20,1);
+var base2Forma = new THREE.CylinderGeometry(4,4,1,20,1);
+var base3Forma = new THREE.CylinderGeometry(3,4,2,20,2);
+var troncoForma = new THREE.CylinderGeometry(3,3,6,20,6);
+var cubierta1Forma = new THREE.CylinderGeometry(4,3,2,20,2);
+var cubierta2Forma = new THREE.CylinderGeometry(4,4,2,20,3);
 
 var arco1 = new THREE.Shape();
 arco1.moveTo(0, 0);
@@ -110,7 +110,7 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
   
   peonMalla1.rotateX(Math.PI/2);
   peonMalla1.translateY(3);
-  peonMalla1.translateZ(-10);
+  peonMalla1.translateZ(-70);
   peonMalla1.translateX(10);
 
 //Tablero
