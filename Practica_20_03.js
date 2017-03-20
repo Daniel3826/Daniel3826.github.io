@@ -1,39 +1,39 @@
 //Figuras
-var base1Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
-var base2Forma = new THREE.CylinderGeometry(4,4,1,20,1,false);
-var base3Forma = new THREE.CylinderGeometry(3,4,2,20,2,false);
-var troncoForma = new THREE.CylinderGeometry(3,3,6,20,6,false);
-var cubierta1Forma = new THREE.CylinderGeometry(4,3,2,20,2,false);
-var cubierta2Forma = new THREE.CylinderGeometry(4,4,2,20,3,false);
+var base1Forma = new THREE.CylinderGeometry(5,5,1,20,1);
+var base2Forma = new THREE.CylinderGeometry(4,4,1,20,1);
+var base3Forma = new THREE.CylinderGeometry(3,4,2,20,2);
+var troncoForma = new THREE.CylinderGeometry(3,3,6,20,6);
+var cubierta1Forma = new THREE.CylinderGeometry(4,3,2,20,2);
+var cubierta2Forma = new THREE.CylinderGeometry(4,4,2,20,3);
 
 var arco1 = new THREE.Shape();
 arco1.moveTo(0, 0);
-arco1.arc(0, 0, 4, .52, -.52, true);
+arco1.arc(0, 0, 4, .52, -.52);
 arco1.lineTo(3.46, -2);
-var pico1 = new THREE.ExtrudeGeometry( arco1, {amount: 1, bevelEnabled: false});
+var pico1 = new THREE.ExtrudeGeometry( arco1, {amount: 1});
 pico1.rotateX(Math.PI/2);
 
 var arco2 = new THREE.Shape();
 arco2.moveTo(0, 0);
-arco2.arc(0, 0, 4, .52, -.52, true);
+arco2.arc(0, 0, 4, .52, -.52);
 arco2.lineTo(3.46, -2);
-var pico2 = new THREE.ExtrudeGeometry( arco2, {amount: 1, bevelEnabled: false});
+var pico2 = new THREE.ExtrudeGeometry( arco2, {amount: 1});
 pico2.rotateX(Math.PI/2);
 pico2.rotateY(Math.PI/2);
 
 var arco3 = new THREE.Shape();
 arco3.moveTo(0, 0);
-arco3.arc(0, 0, 4, .52, -.52, true);
+arco3.arc(0, 0, 4, .52, -.52);
 arco3.lineTo(3.46, -2);
-var pico3 = new THREE.ExtrudeGeometry( arco3, {amount: 1, bevelEnabled: false});
+var pico3 = new THREE.ExtrudeGeometry( arco3, {amount: 1});
 pico3.rotateX(Math.PI/2);
 pico3.rotateY(Math.PI);
 
 var arco4 = new THREE.Shape();
 arco4.moveTo(0, 0);
-arco4.arc(0, 0, 4, .52, -.52, true);
+arco4.arc(0, 0, 4, .52, -.52);
 arco4.lineTo(3.46, -2);
-var pico4 = new THREE.ExtrudeGeometry( arco4, {amount: 1, bevelEnabled: false});
+var pico4 = new THREE.ExtrudeGeometry( arco4, {amount: 1});
 pico4.rotateX(Math.PI/2);
 pico4.rotateY(Math.PI*3/2);
 
