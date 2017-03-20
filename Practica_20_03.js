@@ -156,6 +156,8 @@ base.position.z=-2;
 escena.add(base);
 escena.add(torreMalla);
 escena.add(torreMalla1);
+escena.add(peonMalla);
+escena.add(peonMalla1);
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
