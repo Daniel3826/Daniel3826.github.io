@@ -115,10 +115,17 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
 //Tablero
 var campoVision = 45;
 var relacionAspecto = window.innerWidth / window.innerWidth;
-var planoCercano = 1;
+var planoCercano = 10;
 var planoLejano = 1000;
 var camara = new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
 camara.position.z=15;
+
+camara.position.z=50;
+camara.position.x=160;
+camara.position.y=40;
+camara.lookAt(new THREE.Vector3(40,40,0));
+camara.rotateZ(Math.PI/2);
+
 
 var escena = new THREE.Scene();
 var cubo= new Array();
