@@ -111,7 +111,7 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
   peonMalla1.rotateX(Math.PI/2);
   peonMalla1.translateY(3);
   peonMalla1.translateZ(-70);
-  peonMalla1.translateX(10);
+
 
 //Tablero
 var campoVision = 45;
