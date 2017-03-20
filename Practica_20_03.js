@@ -107,7 +107,6 @@ escena.add(base);
 escena.add(torreMalla);
 escena.add(torreMalla1);
 escena.add(torreMalla2);
-escena.add(torreMalla3);
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderizador.domElement);
