@@ -115,7 +115,7 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
 //Tablero
 var campoVision = 45;
 var relacionAspecto = window.innerWidth / window.innerWidth;
-var planoCercano = 130;
+var planoCercano = 65;
 var planoLejano = 1000;
 var camara = new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
 camara.position.z=15;
