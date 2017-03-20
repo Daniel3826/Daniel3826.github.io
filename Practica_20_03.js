@@ -81,6 +81,38 @@ torreMalla1.rotateX(Math.PI/2);
 torreMalla1.translateY(3);
 torreMalla1.translateZ(-70);
 
+//Figuras2
+var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
+  var base5Forma = new THREE.CylinderGeometry(4,4,1,20,1,false);
+  var tronco2Forma = new THREE.CylinderGeometry(1.5,3,7,7,7,false);
+  var cabeza2Forma = new THREE.SphereGeometry(2);
+
+  base5Forma.translate(0,1,0);
+  tronco2Forma.translate(0,5,0);
+  cabeza2Forma.translate(0,9.5,0);
+
+  var base4Malla = new THREE.Mesh(base4Forma);
+  var base5Malla= new THREE.Mesh(base5Forma);
+  var tronco2Malla= new THREE.Mesh(tronco2Forma);
+  var cabeza2Malla= new THREE.Mesh(cabeza2Forma);
+
+  var peonForma = new THREE.Geometry();
+  peonForma.merge(base4Malla.geometry, base4Malla.matrix);
+  peonForma.merge(base5Malla.geometry, base5Malla.matrix);
+  peonForma.merge(tronco2Malla.geometry, tronco2Malla.matrix);
+  peonForma.merge(cabeza2Malla.geometry, cabeza2Malla.matrix);
+  peonMalla = new THREE.Mesh(peonForma, material);
+  peonMalla1 = new THREE.Mesh(peonForma, material);
+  
+  peonMalla.rotateX(Math.PI/2);
+  peonMalla.translateY(3);
+  peonMalla.translateZ(-10);
+  
+  peonMalla1.rotateX(Math.PI/2);
+  peonMalla1.translateY(3);
+  peonMalla1.translateZ(-10);
+  peonMalla1.translateX(10);
+
 //Tablero
 var campoVision = 45;
 var relacionAspecto = window.innerWidth / window.innerHeight;
