@@ -118,14 +118,14 @@ camara.left=window.innerWidth/-2;
 camara.right=window.innerWidth/-2;
 camara.top=window.innerHeight/-2;
 camara.bottom=window.innerHeight/-2;
-camara.near=30;
-camara.far=100;
+camara.near=0.1;
+camara.far=1000;
 camara.updateProjectionMatrix();
 
-camara.position.z=100;
-camara.position.z=50;
-camara.position.x=160;
-camara.position.y=40;
+camara.position.z=80;
+camara.position.z=40;
+camara.position.x=150;
+camara.position.y=30;
 camara.lookAt(new THREE.Vector3(40,40,0));
 camara.rotateZ(Math.PI/2);
 
