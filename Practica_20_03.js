@@ -127,6 +127,7 @@ camara.position.z=200;
 camara.position.x=100;
 camara.position.z=100;
 camara.rotateZ(Math.PI/2);
+camara.lookAt(new THREE.Vector3(40,40,0));
 
 var escena = new THREE.Scene();
 var cubo= new Array();
