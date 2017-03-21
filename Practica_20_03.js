@@ -116,9 +116,9 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
 var camara = new THREE.OrthographicCamera();
 camara.left=window.innerWidth/-2;
 camara.right=window.innerWidth/-2;
-camara.top=window.innerHeight/-3;
+camara.top=window.innerHeight/-2;
 camara.bottom=window.innerHeight/-2;
-camara.near=1;
+camara.near=30;
 camara.far=100;
 camara.updateProjectionMatrix();
 
