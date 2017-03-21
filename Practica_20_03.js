@@ -116,15 +116,16 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
 var camara = new THREE.OrthographicCamera();
 
 camara.left=window.innerWidth/-3;
-camara.right=window.innerWidth/3;
-camara.top=window.innerHeight/3;
+camara.right=window.innerWidth/5;
+camara.top=window.innerHeight/5;
 camara.bottom=window.innerHeight/-3;
 camara.near=0.1;
 camara.far=1000;
 camara.updateProjectionMatrix();
 
-camara.position.z=100;
+camara.position.z=200;
 camara.position.x=100;
+camara.position.z=100;
 
 var escena = new THREE.Scene();
 var cubo= new Array();
