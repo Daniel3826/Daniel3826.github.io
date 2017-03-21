@@ -115,12 +115,12 @@ var base4Forma = new THREE.CylinderGeometry(5,5,1,20,1,false);
 //Tablero
 var camara = new THREE.OrthographicCamera();
 
-camara.left=window.innerWidth/-2;
-camara.right=window.innerWidth/2;
-camara.top=window.innerHeight/2;
-camara.bottom=window.innerHeight/-2;
+camara.left=window.innerWidth/-3;
+camara.right=window.innerWidth/3;
+camara.top=window.innerHeight/3;
+camara.bottom=window.innerHeight/-3;
 camara.near=0.1;
-camara.far=10;
+camara.far=1000;
 camara.updateProjectionMatrix();
 
 camara.position.z=100;
