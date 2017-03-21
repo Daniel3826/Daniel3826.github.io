@@ -124,6 +124,7 @@ camara.far=1000;
 camara.updateProjectionMatrix();
 
 camara.position.z=100;
+camara.position.x=100;
 
 var escena = new THREE.Scene();
 var cubo= new Array();
