@@ -836,7 +836,7 @@ function setup(){
   escena.add(vacio35);
   escena.add(vacio36);
   escena.add(iluminacion);
-  renderizador = new THREE.WebGLRenderer();
+  var renderizador = new THREE.WebGLRenderer();
   renderizador.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderizador.domElement);
   renderizador.shadowMap.enabled=true;
