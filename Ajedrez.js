@@ -80,7 +80,7 @@
   torreForma.merge(base1Malla.geometry, base1Malla.matrix);
   torreForma.merge(base2Malla.geometry, base2Malla.matrix);
   torreForma.merge(base3Malla.geometry, base3Malla.matrix);
-  torreForma.merge(toncoMalla.geometry, toncoMalla.matrix);
+  torreForma.merge(troncoMalla.geometry, troncoMalla.matrix);
   torreForma.merge(cubierta1Malla.geometry, cubierta1Malla.matrix);
   torreForma.merge(cubierta2Malla.geometry, cubierta2Malla.matrix);
   torreForma.merge(pico1Malla.geometry, pico1Malla.matrix);
