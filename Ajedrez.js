@@ -839,7 +839,7 @@ function setup(){
   renderizador = new THREE.WebGLRenderer();
   renderizador.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderizador.domElement);
-  renderizador.shadowMapEnabled=true;
+  renderizador.shadowMap.enabled=true;
   iluminacion.castShadow=true;
   torreMalla.castShadow=true;
   torreMalla1.castShadow=true;
