@@ -157,7 +157,7 @@
   reyForma.merge(base1Malla.geometry, base1Malla.matrix);
   reyForma.merge(base2Malla.geometry, base2Malla.matrix);
   reyForma.merge(base3Malla.geometry, base3Malla.matrix);
-  reyForma.merge(toncoMalla.geometry, toncoMalla.matrix);
+  reyForma.merge(troncoMalla.geometry, troncoMalla.matrix);
   reyForma.merge(detalle1Malla.geometry, detalle1Malla.matrix);
   reyForma.merge(detalle2Malla.geometry, detalle2Malla.matrix);
   reyForma.merge(detalle3Malla.geometry, detalle3Malla.matrix);
