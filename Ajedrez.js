@@ -5,9 +5,9 @@
   iluminacion.position.z= 50;
 
 //Texturas
-  var textura1 = new THREE.TextureLoader().load('marnol_blanco.jpg');
-  var textura2 = new THREE.TextureLoader().load('marnol_cafe.jpg');
-  var textura3 = new THREE.TextureLoader().load('marnol_negro.jpg');
+  var textura1 = new THREE.TextureLoader().load('marmol_blanco.jpg');
+  var textura2 = new THREE.TextureLoader().load('marmol_cafe.jpg');
+  var textura3 = new THREE.TextureLoader().load('marmol_negro.jpg');
   var textura4 = new THREE.TextureLoader().load('ceramica_blanca.jpg');
   var textura5 = new THREE.TextureLoader().load('ceramica_negra.jpg');
   var marmolblanco = new THREE.MeshLambertMaterial({map:textura1});
@@ -68,7 +68,7 @@
   var base1Malla = new THREE.Mesh(base1Forma);
   var base2Malla= new THREE.Mesh(base2Forma);
   var base3Malla= new THREE.Mesh(base3Forma);
-  var toncoMalla= new THREE.Mesh(troncoForma);
+  var troncoMalla= new THREE.Mesh(troncoForma);
   var cubierta1Malla= new THREE.Mesh(cubierta1Forma);
   var cubierta2Malla= new THREE.Mesh(cubierta2Forma);
   var pico1Malla= new THREE.Mesh(pico1);
@@ -141,7 +141,7 @@
   var base1Malla = new THREE.Mesh(base1Forma);
   var base2Malla= new THREE.Mesh(base2Forma);
   var base3Malla= new THREE.Mesh(base3Forma);
-  var toncoMalla= new THREE.Mesh(troncoForma);
+  var troncoMalla= new THREE.Mesh(troncoForma);
   var detalle1Malla= new THREE.Mesh(detalle1Forma);
   var detalle2Malla= new THREE.Mesh(detalle2Forma);
   var detalle3Malla= new THREE.Mesh(detalle3Forma);
@@ -241,7 +241,7 @@
   var base1Malla = new THREE.Mesh(base1Forma);
   var base2Malla= new THREE.Mesh(base2Forma);
   var base3Malla= new THREE.Mesh(base3Forma);
-  var toncoMalla= new THREE.Mesh(troncoForma);
+  var troncoMalla= new THREE.Mesh(troncoForma);
   var detalle1Malla= new THREE.Mesh(detalle1Forma);
   var detalle2Malla= new THREE.Mesh(detalle2Forma);
   var detalle3Malla= new THREE.Mesh(detalle3Forma);
@@ -769,7 +769,6 @@
   base.position.x=35;
   base.position.y=35;
   base.position.z=-2;
-  escena.add(seleccionadorMalla);
   escena.add(base);
   escena.add(torreMalla);
   escena.add(torreMalla1);
