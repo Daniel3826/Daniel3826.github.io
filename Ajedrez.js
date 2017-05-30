@@ -870,7 +870,6 @@
   peonMalla14.castShadow=true;
   peonMalla15.castShadow=true;
   base.receiveShadow=true;
-}
 
 setup();
 loop();
