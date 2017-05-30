@@ -4,6 +4,7 @@
   iluminacion.position.x= 40;
   iluminacion.position.z= 50;
 
+function setup(){
 //Texturas
   var textura1 = new THREE.TextureLoader().load('marmol_blanco.jpg');
   var textura2 = new THREE.TextureLoader().load('marmol_cafe.jpg');
@@ -869,6 +870,5 @@
   peonMalla14.castShadow=true;
   peonMalla15.castShadow=true;
   base.receiveShadow=true;
-
+}
 setup();
-loop();
