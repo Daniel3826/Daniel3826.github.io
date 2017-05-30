@@ -130,14 +130,14 @@ function Torre(textura){
   this.pieder= new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshBasicMaterial({color: 0x99CCFF}));
   this.add(this.pieizq,this.pieder);
 
-  if(textura===TEXTURAS.ceramicanegra){
+  if(textura===TEXTURAS.oro){
 	    this.side=1;
 	    this.pieizq.position.x=4;
 	    this.pieder.position.x=-4;
 	    this.pieizq.position.z=-2;
 	    this.pieder.position.z=-2;
     }
-    else if(textura===TEXTURAS.ceramicablanca){
+    else if(textura===TEXTURAS.plata){
 	    this.side=0;
 	    this.pieizq.position.x=-4;
 	    this.pieder.position.x=4;
@@ -278,7 +278,7 @@ function Caballo(textura){
   this.pieder= new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshBasicMaterial({color: 0x99CCFF}));
   this.add(this.pieizq,this.pieder);
 
-  if(textura===TEXTURAS.ceramicanegra){
+  if(textura===TEXTURAS.oro){
 	    this.side=1;
 	    this.pieizq.position.z=4;
 	    this.pieder.position.z=-4;
@@ -287,7 +287,7 @@ function Caballo(textura){
 	    this.pieizq.rotateY(Math.PI/2);
 	    this.pieder.rotateY(Math.PI/2);
     }
-    else if(textura===TEXTURAS.ceramicablanca){
+    else if(textura===TEXTURAS.plata){
 	    this.side=0;
 	    this.pieizq.position.z=-4;
 	    this.pieder.position.z=4;
@@ -572,14 +572,14 @@ function Alfil(textura){
   this.pieder= new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshBasicMaterial({color: 0x99CCFF}));
   this.add(this.pieizq,this.pieder);
 
-  if(textura===TEXTURAS.ceramicanegra){
+  if(textura===TEXTURAS.oro){
 	    this.side=1;
 	    this.pieizq.position.x=4;
 	    this.pieder.position.x=-4;
 	    this.pieizq.position.z=-2;
 	    this.pieder.position.z=-2;
     }
-    else if(textura===TEXTURAS.ceramicablanca){
+    else if(textura===TEXTURAS.plata){
 	    this.side=0;
 	    this.pieizq.position.x=-4;
 	    this.pieder.position.x=4;
@@ -796,14 +796,14 @@ function Rey(textura){
   this.pieder= new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshBasicMaterial({color: 0x99CCFF}));
   this.add(this.pieizq,this.pieder);
 
-  if(textura===TEXTURAS.ceramicanegra){
+  if(textura===TEXTURAS.oro){
 	    this.side=1;
 	    this.pieizq.position.x=4;
 	    this.pieder.position.x=-4;
 	    this.pieizq.position.z=-2;
 	    this.pieder.position.z=-2;
     }
-    else if(textura===TEXTURAS.ceramicablanca){
+    else if(textura===TEXTURAS.plata){
 	    this.side=0;
 	    this.pieizq.position.x=-4;
 	    this.pieder.position.x=4;
@@ -1106,14 +1106,14 @@ function Reina(textura){
   this.pieder= new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshBasicMaterial({color: 0x99CCFF}));
   this.add(this.pieizq,this.pieder);
 
-  if(textura===TEXTURAS.ceramicanegra){
+  if(textura===TEXTURAS.oro){
 	    this.side=1;
 	    this.pieizq.position.x=4;
 	    this.pieder.position.x=-4;
 	    this.pieizq.position.z=-2;
 	    this.pieder.position.z=-2;
     }
-    else if(textura===TEXTURAS.ceramicablanca){
+    else if(textura===TEXTURAS.plata){
 	    this.side=0;
 	    this.pieizq.position.x=-4;
 	    this.pieder.position.x=4;
@@ -1341,14 +1341,14 @@ function Peon(textura){
   this.pieder= new THREE.Mesh(new THREE.BoxGeometry(2,2,6),new THREE.MeshBasicMaterial({color: 0x99CCFF}));
   this.add(this.pieizq,this.pieder);
 
-  if(textura===TEXTURAS.ceramicanegra){
+  if(textura===TEXTURAS.oro){
 	    this.side=1;
 	    this.pieizq.position.x=4;
 	    this.pieder.position.x=-4;
 	    this.pieizq.position.z=-2;
 	    this.pieder.position.z=-2;
     }
-    else if(textura===TEXTURAS.ceramicablanca){
+    else if(textura===TEXTURAS.plata){
 	    this.side=0;
 	    this.pieizq.position.x=-4;
 	    this.pieder.position.x=4;
@@ -2238,10 +2238,10 @@ function setup(){
   iluminacion.position.x= 40;
   iluminacion.position.z= 50;
   	//TORRES
-  torreMalla = new Torre(TEXTURAS.ceramicanegra);
-  torreMalla1 = new Torre(TEXTURAS.ceramicablanca);
-  torreMalla2 = new Torre(TEXTURAS.ceramicablanca);
-  torreMalla3 = new Torre(TEXTURAS.ceramicanegra);
+  torreMalla = new Torre(TEXTURAS.oro);
+  torreMalla1 = new Torre(TEXTURAS.plata);
+  torreMalla2 = new Torre(TEXTURAS.plata);
+  torreMalla3 = new Torre(TEXTURAS.oro);
   
   torreMalla.rotateX(Math.PI/2);
   torreMalla.translateY(3);
@@ -2260,10 +2260,10 @@ function setup(){
   torreMalla3.translateX(70);
 
 //CABALLOS
-  caballoMalla = new Caballo(TEXTURAS.ceramicanegra);
-  caballoMalla1 = new Caballo(TEXTURAS.ceramicablanca);
-  caballoMalla2 = new Caballo(TEXTURAS.ceramicablanca);
-  caballoMalla3 = new Caballo(TEXTURAS.ceramicanegra);
+  caballoMalla = new Caballo(TEXTURAS.oro);
+  caballoMalla1 = new Caballo(TEXTURAS.plata);
+  caballoMalla2 = new Caballo(TEXTURAS.plata);
+  caballoMalla3 = new Caballo(TEXTURAS.oro);
 
   caballoMalla.rotateX(Math.PI/2);
   caballoMalla.translateY(3);
@@ -2288,8 +2288,8 @@ function setup(){
   caballoMalla3.rotation.y=Math.PI/2;
 	
 //REYES
-  reyMalla = new Rey(TEXTURAS.ceramicanegra);
-  reyMalla1 = new Rey(TEXTURAS.ceramicablanca);
+  reyMalla = new Rey(TEXTURAS.oro);
+  reyMalla1 = new Rey(TEXTURAS.plata);
 
   reyMalla.rotateX(Math.PI/2);
   reyMalla.position.z=3;
@@ -2300,8 +2300,8 @@ function setup(){
   reyMalla1.translateZ(-70);
   reyMalla1.translateX(30);  
 //REINAS
-  reinaMalla = new Reina(TEXTURAS.ceramicanegra);
-  reinaMalla1 = new Reina(TEXTURAS.ceramicablanca);
+  reinaMalla = new Reina(TEXTURAS.oro);
+  reinaMalla1 = new Reina(TEXTURAS.plata);
 
   reinaMalla.rotateX(Math.PI/2);
   reinaMalla.translateY(3);
@@ -2312,10 +2312,10 @@ function setup(){
   reinaMalla1.translateX(40);
   reinaMalla1.translateZ(-70);
 //ALFIL
-  alfilMalla = new Alfil(TEXTURAS.ceramicanegra);
-  alfilMalla1 = new Alfil(TEXTURAS.ceramicablanca);
-  alfilMalla2 = new Alfil(TEXTURAS.ceramicanegra);
-  alfilMalla3 = new Alfil(TEXTURAS.ceramicablanca);
+  alfilMalla = new Alfil(TEXTURAS.oro);
+  alfilMalla1 = new Alfil(TEXTURAS.plata);
+  alfilMalla2 = new Alfil(TEXTURAS.oro);
+  alfilMalla3 = new Alfil(TEXTURAS.plata);
   
   alfilMalla.rotateX(Math.PI/2);
   alfilMalla.translateY(2);
@@ -2335,22 +2335,22 @@ function setup(){
   alfilMalla3.translateX(50);
   alfilMalla3.translateZ(-70);
 //PEON
-  peonMalla = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla1 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla2 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla3 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla4 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla5 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla6 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla7 = new Peon(TEXTURAS.ceramicanegra);
-  peonMalla8 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla9 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla10 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla11 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla12 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla13 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla14 = new Peon(TEXTURAS.ceramicablanca);
-  peonMalla15 = new Peon(TEXTURAS.ceramicablanca);
+  peonMalla = new Peon(TEXTURAS.oro);
+  peonMalla1 = new Peon(TEXTURAS.oro);
+  peonMalla2 = new Peon(TEXTURAS.oro);
+  peonMalla3 = new Peon(TEXTURAS.oro);
+  peonMalla4 = new Peon(TEXTURAS.oro);
+  peonMalla5 = new Peon(TEXTURAS.oro);
+  peonMalla6 = new Peon(TEXTURAS.oro);
+  peonMalla7 = new Peon(TEXTURAS.oro);
+  peonMalla8 = new Peon(TEXTURAS.plata);
+  peonMalla9 = new Peon(TEXTURAS.plata);
+  peonMalla10 = new Peon(TEXTURAS.plata);
+  peonMalla11 = new Peon(TEXTURAS.plata);
+  peonMalla12 = new Peon(TEXTURAS.plata);
+  peonMalla13 = new Peon(TEXTURAS.plata);
+  peonMalla14 = new Peon(TEXTURAS.plata);
+  peonMalla15 = new Peon(TEXTURAS.plata);
   
   peonMalla.rotateX(Math.PI/2);
   peonMalla.translateY(3);
@@ -2811,7 +2811,7 @@ function setup(){
 var setupDone=false;
 function loop(){
   requestAnimationFrame(loop);
-  if(TEXTURAS.madera!==undefined && TEXTURAS.ceramicablanca!==undefined && TEXTURAS.ceramicanegra!==undefined && TEXTURAS.marmolblanco!==undefined && TEXTURAS.marmolnegro!==undefined && !setupDone){
+  if(TEXTURAS.madera!==undefined && TEXTURAS.plata!==undefined && TEXTURAS.oro!==undefined && TEXTURAS.marmolblanco!==undefined && TEXTURAS.marmolnegro!==undefined && !setupDone){
       setup();
   }
   if(cuyo==2){
@@ -2834,15 +2834,15 @@ function loop(){
 //LOADER DE TEXTURAS
 var cargador = new THREE.TextureLoader();
 function TexturaSetup(){
-    cargador.load("ceramica_negra.jpg",
-                  function(textura){ TEXTURAS.ceramicanegra = textura;});
-    cargador.load("ceramica_blanca.jpg",
-                  function(textura){ TEXTURAS.ceramicablanca = textura;});
+    cargador.load("oro.jpg",
+                  function(textura){ TEXTURAS.oro = textura;});
+    cargador.load("plata.jpg",
+                  function(textura){ TEXTURAS.plata = textura;});
     cargador.load("marmol_blanco.jpg",
                   function(textura){ TEXTURAS.marmolblanco = textura;});
     cargador.load("marmol_negro.jpg",
                   function(textura){ TEXTURAS.marmolnegro = textura;});
-    cargador.load("marmol_cafe.jpg",
+    cargador.load("madera.jpg",
                   function(textura){ TEXTURAS.madera = textura;});
 }
 
