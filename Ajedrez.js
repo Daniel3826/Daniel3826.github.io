@@ -257,7 +257,7 @@
   reinaForma.merge(base1Malla.geometry, base1Malla.matrix);
   reinaForma.merge(base2Malla.geometry, base2Malla.matrix);
   reinaForma.merge(base3Malla.geometry, base3Malla.matrix);
-  reinaForma.merge(toncoMalla.geometry, toncoMalla.matrix);
+  reinaForma.merge(troncoMalla.geometry, troncoMalla.matrix);
   reinaForma.merge(pico1Malla.geometry, pico1Malla.matrix);
   reinaForma.merge(pico2Malla.geometry, pico2Malla.matrix);
   reinaForma.merge(pico3Malla.geometry, pico3Malla.matrix);
