@@ -840,6 +840,7 @@ function setup(){
   renderizador.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderizador.domElement);
   renderizador.shadowMap.enabled=true;
+  renderizador.render(escena, camara);
   iluminacion.castShadow=true;
   torreMalla.castShadow=true;
   torreMalla1.castShadow=true;
