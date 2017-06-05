@@ -2212,7 +2212,7 @@ function Seleccionador(){
   var seleccionadorForma = new THREE.Geometry();
   seleccionadorForma.merge(base1selec.geometry, base1selec.matrix);
   seleccionadorForma.merge(base2selec.geometry, base2selec.matrix);
-  var material= new THREE.MeshBasicMaterial({color: 0xB40100});
+  var material= new THREE.MeshBasicMaterial({color: 0xFFFFFF});
   var seleccionador = new THREE.Mesh(seleccionadorForma, material);
   this.add(seleccionador);
 }
@@ -2221,9 +2221,9 @@ Seleccionador.prototype=new Agent();
 //SETUP
 function setup(){
 	//CAMARA
-  var campoVision = 45;
+  var campoVision = 80;
   var relacionAspecto = window.innerWidth / window.innerHeight;
-  var planoCercano = 1;
+  var planoCercano = 10;
   var planoLejano = 1000;
   camara = new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
   camara.position.z=150;
