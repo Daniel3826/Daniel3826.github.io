@@ -2221,14 +2221,14 @@ Seleccionador.prototype=new Agent();
 //SETUP
 function setup(){
 	//CAMARA
-  var campoVision = 80;
+  var campoVision = 45;
   var relacionAspecto = window.innerWidth / window.innerHeight;
-  var planoCercano = 10;
+  var planoCercano = 0.1;
   var planoLejano = 1000;
   camara = new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.z=150;
-  camara.position.x=100;
-  camara.position.y=40;
+  camara.position.z=160;
+  camara.position.x=110;
+  camara.position.y=50;
   camara.lookAt(new THREE.Vector3(40,40,0));
   camara.rotateZ(Math.PI/2);
   setupDone=true;
