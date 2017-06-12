@@ -4,20 +4,21 @@ iluminacion.position.y= 40;
 iluminacion.position.x= 40;
 iluminacion.position.z= 50;
 
-var camara,escena,renderizador,torreMalla;
+var camara,escena,renderizador;
 
 function setup(){
+  
   //Texturas
-  var textura1 = new THREE.TextureLoader().load('marnol_blanco.jpg');
-  var textura2 = new THREE.TextureLoader().load('marnol_cafe.jpg');
-  var textura3 = new THREE.TextureLoader().load('marnol_negro.jpg');
-  var textura4 = new THREE.TextureLoader().load('ceramica_blanca.jpg');
-  var textura5 = new THREE.TextureLoader().load('ceramica_negra.jpg');
+  var textura1 = new THREE.TextureLoader().load('marmol_blanco.jpg');
+  var textura2 = new THREE.TextureLoader().load('marmol_cafe.jpg');
+  var textura3 = new THREE.TextureLoader().load('marmol_negro.jpg');
+  var textura4 = new THREE.TextureLoader().load('oro.jpg');
+  var textura5 = new THREE.TextureLoader().load('plata.jpg');
   var marmolblanco = new THREE.MeshLambertMaterial({map:textura1});
   var marmolcafe = new THREE.MeshLambertMaterial({map:textura2});
   var marmolnegro = new THREE.MeshLambertMaterial({map:textura3});
-  var ceramicablanca = new THREE.MeshLambertMaterial({map:textura4});
-  var ceramicanegra = new THREE.MeshLambertMaterial({map:textura5});
+  var oro = new THREE.MeshLambertMaterial({map:textura4});
+  var plata = new THREE.MeshLambertMaterial({map:textura5});
   
   
   //Torres
@@ -69,7 +70,6 @@ function setup(){
   pico3.translate(0,12,0);
   pico4.translate(0,12,0);
   
-
   var base1Malla = new THREE.Mesh(base1Forma);
   var base2Malla= new THREE.Mesh(base2Forma);
   var base3Malla= new THREE.Mesh(base3Forma);
@@ -92,27 +92,27 @@ function setup(){
   torreForma.merge(pico2Malla.geometry, pico2Malla.matrix);
   torreForma.merge(pico3Malla.geometry, pico3Malla.matrix);
   torreForma.merge(pico4Malla.geometry, pico4Malla.matrix);
-  //var material= new THREE.MeshNormalMaterial();
-  torreMalla = new THREE.Mesh(torreForma, ceramicablanca);
-  //var torreMalla1 = new THREE.Mesh(torreForma, ceramicanegra);
-  //var torreMalla2 = new THREE.Mesh(torreForma, ceramicanegra);
-  //var torreMalla3 = new THREE.Mesh(torreForma, ceramicablanca);
+  
+  var torreMalla = new THREE.Mesh(torreForma, oro);
+  var torreMalla1 = new THREE.Mesh(torreForma, plata);
+  var torreMalla2 = new THREE.Mesh(torreForma, plata);
+  var torreMalla3 = new THREE.Mesh(torreForma, oro);
   
   torreMalla.rotateX(Math.PI/2);
   torreMalla.translateY(3);
 
-  //torreMalla1.rotateX(Math.PI/2);
-  //torreMalla1.translateY(3);
-  //torreMalla1.translateZ(-70);
+  torreMalla1.rotateX(Math.PI/2);
+  torreMalla1.translateY(3);
+  torreMalla1.translateZ(-70);
 
-  //torreMalla2.rotateX(Math.PI/2);
-  //torreMalla2.translateY(3);
-  //torreMalla2.translateZ(-70);
-  //torreMalla2.translateX(70);
+  torreMalla2.rotateX(Math.PI/2);
+  torreMalla2.translateY(3);
+  torreMalla2.translateZ(-70);
+  torreMalla2.translateX(70);
   
-  //torreMalla3.rotateX(Math.PI/2);
-  //torreMalla3.translateY(3);
-  //torreMalla3.translateX(70);
+  torreMalla3.rotateX(Math.PI/2);
+  torreMalla3.translateY(3);
+  torreMalla3.translateX(70);
   
   //Tablero
   var campoVision = 45;
@@ -160,17 +160,17 @@ function setup(){
   base.position.z=-2;
   escena.add(base);
   escena.add(torreMalla);
-  //escena.add(torreMalla1);
-  //escena.add(torreMalla2);
-  //escena.add(torreMalla3);
+  escena.add(torreMalla1);
+  escena.add(torreMalla2);
+  escena.add(torreMalla3);
   escena.add(iluminacion);
   renderizador = new THREE.WebGLRenderer();
-  renderizador.setSize(window.innerWidth-100, window.innerHeight-100);
+  renderizador.setSize(window.innerWidth, window.innerHeight);
   renderizador.shadowMapEnabled=true;
   torreMalla.castShadow=true;
-  //torreMalla1.castShadow=true;
-  //torreMalla2.castShadow=true;
-  //torreMalla3.castShadow=true;
+  torreMalla1.castShadow=true;
+  torreMalla2.castShadow=true;
+  torreMalla3.castShadow=true;
   base.receiveShadow=true;
   iluminacion.castShadow=true;
   document.body.appendChild(renderizador.domElement);
@@ -179,26 +179,6 @@ function setup(){
 
 
 function loop(){
-  window.onload=function(){document.onkeydown=desplazar};
-    function desplazar(objeto){
-    var tecla = objeto.which;
-        switch (tecla){
-            case 37 :   
-                torreMalla.translateX(10);
-                break;
-            case 38 : 
-                torreMalla.translateZ(-10);
-                break;
-            case 39 :  
-                torreMalla.translateZ(10);
-              
-                break;
-            case 40 : 
-                torreMalla.translateX(-10);
-                break;
-        default :alert("Se ha equivocado, debe pulsar las flechas del teclado");
-        }
-    }
   requestAnimationFrame(loop);
   renderizador.render(escena,camara);
 }
