@@ -123,7 +123,7 @@ function setup(){
   base.position.z=-2;
   escena.add(base);
   escena.add(torreMalla);
-  escena.add(iluminacion);
+  
   renderizador = new THREE.WebGLRenderer();
   renderizador.setSize(window.innerWidth-100, window.innerHeight-100);
   renderizador.shadowMapEnabled=true;
