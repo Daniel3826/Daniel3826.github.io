@@ -51,7 +51,6 @@ function setup(){
   pico3.translate(0,12,0);
   pico4.translate(0,12,0);
   
-
   var base1Malla = new THREE.Mesh(base1Forma);
   var base2Malla= new THREE.Mesh(base2Forma);
   var base3Malla= new THREE.Mesh(base3Forma);
@@ -62,6 +61,8 @@ function setup(){
   var pico2Malla= new THREE.Mesh(pico2);
   var pico3Malla= new THREE.Mesh(pico3);
   var pico4Malla= new THREE.Mesh(pico4);
+  
+  var material= new THREE.MeshNormalMaterial();
   
   var torreForma = new THREE.Geometry();
   torreForma.merge(base1Malla.geometry, base1Malla.matrix);
@@ -74,7 +75,7 @@ function setup(){
   torreForma.merge(pico2Malla.geometry, pico2Malla.matrix);
   torreForma.merge(pico3Malla.geometry, pico3Malla.matrix);
   torreForma.merge(pico4Malla.geometry, pico4Malla.matrix);
-  torreMalla = new THREE.Mesh(torreForma, ceramicablanca);
+  torreMalla = new THREE.Mesh(torreForma, material);
   
   torreMalla.rotateX(Math.PI/2);
   torreMalla.translateY(3);
@@ -91,7 +92,6 @@ function setup(){
   camara.lookAt(new THREE.Vector3(40,40,0));
   camara.rotateZ(Math.PI/2);
   
-  
   escena = new THREE.Scene();
   var cubo= new Array();
   var a=2;
@@ -99,10 +99,10 @@ function setup(){
     for(var i=0; i<8; i++){
       for(var j=0; j<8; j++){
         if(a==2){
-          cubo[k] = new THREE.Mesh( new THREE.BoxGeometry(10, 10, 4), marmolblanco );
+          cubo[k] = new THREE.Mesh( new THREE.BoxGeometry(10, 10, 4), new THREE.MeshBasicMaterial({color: 0xffffff}) );
           a=1;
         }else{
-          cubo[k] = new THREE.Mesh( new THREE.BoxGeometry(10, 10, 4), marmolnegro );
+          cubo[k] = new THREE.Mesh( new THREE.BoxGeometry(10, 10, 4), new THREE.MeshBasicMaterial({color: 0x999999}) );
           a=2;
         }
        cubo[k].position.x=j*10;
@@ -117,7 +117,7 @@ function setup(){
         }
     }
   }
-  var base = new THREE.Mesh( new THREE.BoxGeometry(90, 90, 2), marmolcafe );
+  var base = new THREE.Mesh( new THREE.BoxGeometry(90, 90, 2), new THREE.MeshBasicMaterial({color: 0xCC6633}) );
   base.position.x=35;
   base.position.y=35;
   base.position.z=-2;
@@ -128,11 +128,7 @@ function setup(){
   renderizador.setSize(window.innerWidth-100, window.innerHeight-100);
   renderizador.shadowMapEnabled=true;
   torreMalla.castShadow=true;
-  //torreMalla1.castShadow=true;
-  //torreMalla2.castShadow=true;
-  //torreMalla3.castShadow=true;
-  base.receiveShadow=true;
-  iluminacion.castShadow=true;
+  
   document.body.appendChild(renderizador.domElement);
   
 }
